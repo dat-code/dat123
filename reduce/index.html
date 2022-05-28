@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number = [100,200,220,200,480];
+        // var totalcoin = number.reduce(function(total,numbers) {
+        //     return total + numbers;
+
+        // },0)
+        // console.log(totalcoin)
+        // làm phảng một mảng;
+
+        // var depArray = [1,2,[3,4],5,6,[7,8,9]];
+        // var flatArray = depArray.reduce(function(flatoutput, itemArray) {
+        //       return flatoutput.concat(itemArray);
+        // },[])
+        //   console.log(flatArray);
+
+        // lấy ra các khóa học đưa vào một mảng mới
+        var topics = [
+            {
+                topic:"front-end",
+                courses:[
+                    {
+                        id:1,
+                        title:"HTML, CSS"
+                    },
+                    {
+                        id:2,
+                        title:"Javascript"
+                    }
+                ]
+            },
+            {
+                topic:"Back-end",
+                courses:[
+                    {
+                        id:1,
+                        title:"PHP",
+
+                    },
+                    {
+                        id:2,
+                        title:"NodeJS"
+                    }
+                ]
+            }
+        ];
+        var newcouse = topics.reduce(function(course, topic) {
+               return course.concat(topic.courses);
+        },[])
+        // console.log(newcouse)
+        var htmls = newcouse.map(function(course) {
+            return `<div>
+                      <h2>${course.id}</h2>
+                      <p>${course.title}</p>                
+
+                </div>`;
+        });
+        console.log(htmls.join(''))
+    </script>
+</body>
+</html>

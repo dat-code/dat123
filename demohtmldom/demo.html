@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #flag img {
+            width:200px;
+            height:200px;
+            margin-top:20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="flag">
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script>
+    $(document).ready(function(){
+        var numberFlag = prompt("Nhập số lượng lá cờ bạn muốn hiển thị");
+        for(var i = 0; i< numberFlag; i++) {
+              $("#flag").append(`<img src='https://anhdep123.com/wp-content/uploads/2021/05/anh-la-co-viet-nam-dep-nhat.png'/>`)
+            //document.getElementById("flag").innerHTML = <img src='https://anhdep123.com/wp-content/uploads/2021/05/anh-la-co-viet-nam-dep-nhat.png'/>;
+        }
+    })
+</script>        
+</body>
+</html>

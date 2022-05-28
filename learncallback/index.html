@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback demo</title>
+</head>
+<body>
+    <script>
+        // demo1
+        let greet = (name, callback) => {
+            console.log(name);
+            callback();
+        }
+        let callme = () =>{
+            console.log("i am a callback function");
+        }
+        greet("hai",callme);
+        // demo2
+        let greeting = () => {
+            console.log("heloo word");
+        }
+        let sayname = (name) => {
+            console.log("my name is " + name);
+        }
+        setTimeout(greeting, 2000);
+        sayname("Nam");
+        function myFunction(param) {
+           if (typeof param == "function") {
+           param("Văn Đạt");
+                 
+           }
+        }
+        function callback(user) {
+            console.log("user: "+ user)
+        }
+        myFunction(callback);
+    </script>
+</body>
+</html>

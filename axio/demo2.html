@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jequery ajax</title>
+</head>
+<body>
+    <script>
+         let searchingkeyword = 'foot';
+         let apikey = 'OaI8Scqh6gxKwYuB0TXRiZxeyTICIFcX';
+         let apiUrl = "http://api.giphy.com/v" + 1 + "/gifs/search";
+         function requesdata() {
+             let reques = $.ajax({
+                 url: apiUrl,
+                 method: 'Get',
+                 data: {
+                     q: searchingkeyword,
+                     api_key: apikey
+                 },
+                 dataType: 'json'
+
+             });
+             // hoàn thành
+             reques.done(result =>{
+                 console.log(result);
+             });
+             // thất bại
+             reques.fail(err => {
+                 console.log(err)
+             })
+         }
+         requesdata()
+    </script>
+</body>
+</html>

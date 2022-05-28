@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Wellcome to Seagame 31</h1>
+    </div>
+    <!-- dom style -->
+    <script>
+        var boxElement = document.querySelector(".box");
+    // boxElement.style.width="100px";
+    // boxElement.style.height="200px";
+    // boxElement.style.backgroundColor = 'red';
+    Object.assign(boxElement.style,{
+       width: "100px",
+       height: '200px',
+       backgroundColor:"red"
+    });
+    
+    </script>
+</body>
+</html>

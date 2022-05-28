@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array.prototype.map2 = function(callback) {
+        //     var output = []; 
+        //     var arrayLength = this.length;
+
+        //     for (var i = 0; i<arrayLength; ++i) {
+        //       var result =  callback(this[i],i);
+        //       output.push(result);
+        //     }
+        //     return output;
+        // }
+        // var course = [
+        //     'Javascript',
+        //     'Ruby',
+        //     'PHP'
+        // ];
+        //  var htmls = course.map2(function(course, index) {
+        //         return `<h2>${course}</h2>`;
+        // });
+        // console.log(htmls.join(''))
+        Array.prototype.fillter2 = function(callview) {
+             var result = [];
+             var viewlength = this.length;
+             for (var i = 0; i<viewlength; ++i) {
+                 var output = callview(this[i], i);
+                 result.push(output);
+             }
+             return result;
+        }
+        var views = ['tem1','tem2','tem3'];
+         var htmls = views.fillter2(function(view, index) {
+                    return `<h2>${views}</h2>`;
+         });
+         console.log(htmls.join(''));
+       
+        // var htmls = course.map(function(cours){
+        //     return `<h2>${cours}</h2>`;
+        // });
+        // console.log(htmls.join(''))
+    </script>
+</body>
+</html>

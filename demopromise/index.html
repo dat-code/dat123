@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // demo promise 
+        const count = true;
+        let countvalue = new Promise(function(resolve, reject) {
+            if(count) {
+                resolve("there is a count valiue")
+            } else {
+                reject("there is a no count value")
+            }
+        });
+        // let testPromise = new Promise(function(resolve, reject){
+        //     resolve("Abc")
+        // });
+        // testPromise.then((result) => {
+        //     console.log(testPromise);
+        // }).catch((error)=>{
+        //     console.log(testPromise)
+        // })
+
+        console.log(countvalue);
+    </script>
+</body>
+</html>
